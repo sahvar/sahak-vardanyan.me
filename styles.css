@@ -2558,6 +2558,12 @@ section {
         padding: var(--space-2) var(--space-4);
         font-size: var(--font-size-sm);
     }
+    /* Make contact buttons full width on mobile */
+    .contact-actions .btn {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2577,6 +2583,11 @@ section {
     .btn {
         width: 100%;
         max-width: 200px;
+    }
+    /* Ensure contact buttons truly span the container on small phones */
+    .contact-actions .btn {
+        width: 100%;
+        max-width: none;
     }
     
     .skills-grid {
