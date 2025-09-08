@@ -240,6 +240,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color var(--transition-normal), color var(--transition-normal);
+    overflow-x: hidden;
 }
 
 /* Lock scroll while loading */
@@ -1318,7 +1319,7 @@ p {
 
 .hero-visual {
     position: relative;
-    height: 520px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1347,7 +1348,9 @@ p {
 .hero-portrait {
     position: relative;
     width: 420px;
-    height: 420px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
 }
 
 .hero-portrait-img,
@@ -2495,6 +2498,16 @@ section {
     .hero-visual {
         height: auto;
         flex-direction: column;
+    }
+    .hero-portrait {
+        width: min(80vw, 360px);
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+    }
+    .hero-portrait-svg {
+        width: 100%;
+        height: auto;
+        display: block;
     }
     
     .section-title {
