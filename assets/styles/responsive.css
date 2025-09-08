@@ -1,0 +1,42 @@
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+    .hero-container { grid-template-columns: 1fr; gap: var(--space-12); text-align: center; }
+    .hero-visual { height: 300px; }
+    .about-content, .contact-content { grid-template-columns: 1fr; gap: var(--space-12); }
+    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .about-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 960px) {
+    .portfolio-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-controls { gap: var(--space-2); }
+    .theme-toggle { width: 36px; height: 36px; }
+    .hero-name { font-size: var(--font-size-5xl); }
+    .hero-role { font-size: var(--font-size-xl); }
+    .hero-actions { justify-content: center; }
+    .floating-card { position: relative; margin-bottom: var(--space-4); }
+    .floating-card:nth-child(1), .floating-card:nth-child(2), .floating-card:nth-child(3) { position: relative; top: auto; left: auto; right: auto; bottom: auto; }
+    .hero-visual { height: auto; flex-direction: column; }
+    .hero { padding-top: var(--space-8); }
+    .hero-portrait { width: min(80vw, 360px); aspect-ratio: 1 / 1; margin: 0 auto; }
+    .hero-portrait-svg { width: 100%; height: auto; display: block; }
+    .timeline { overflow-x: hidden; }
+    .timeline-item { padding-left: 50px; }
+    .timeline-content { padding: var(--space-6); }
+    .contact-actions .btn { width: 100%; max-width: 100%; display: block; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 var(--space-4); }
+    .hero-name { font-size: var(--font-size-4xl); }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 200px; }
+    .contact-actions .btn { width: 100%; max-width: none; }
+}
+
+
