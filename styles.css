@@ -1999,7 +1999,20 @@ section {
     .experience .timeline-content:has(.timeline-logo) {
         grid-template-columns: 1fr;
     }
-    .timeline-logo { justify-self: start; }
+    .timeline-logo { 
+        justify-self: start; 
+        grid-column: 1; 
+        grid-row: 1; 
+        margin-bottom: var(--space-3);
+    }
+    .education .timeline-content .timeline-header,
+    .experience .timeline-content .timeline-header { 
+        grid-column: 1; 
+    }
+    .education .timeline-content .timeline-description,
+    .experience .timeline-content .timeline-description { 
+        grid-column: 1; 
+    }
     .timeline { overflow-x: hidden; }
     .timeline-item { padding-left: 50px; }
     .timeline-content { padding: var(--space-6); }
