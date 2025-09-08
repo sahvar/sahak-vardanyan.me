@@ -1913,6 +1913,7 @@ section {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .timeline::before {
@@ -1950,6 +1951,7 @@ section {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-gray-200);
     transition: all var(--transition-normal);
+    max-width: 100%;
 }
 
 /* Inline logos in experience items */
@@ -1998,6 +2000,9 @@ section {
         grid-template-columns: 1fr;
     }
     .timeline-logo { justify-self: start; }
+    .timeline { overflow-x: hidden; }
+    .timeline-item { padding-left: 50px; }
+    .timeline-content { padding: var(--space-6); }
 }
 
 .timeline-header {
@@ -2009,6 +2014,7 @@ section {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--space-2);
+    overflow-wrap: anywhere;
 }
 
 .timeline-company {
@@ -2028,6 +2034,7 @@ section {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: var(--space-1);
+    overflow-wrap: anywhere;
 }
 
 .timeline-period {
@@ -2041,6 +2048,7 @@ section {
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
+    overflow-wrap: anywhere;
 }
 
 /* Portfolio Section */
